@@ -1,68 +1,27 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Install the dependencies for your development machine outlined here: [React Native for Windows Environment Setup](https://microsoft.github.io/react-native-windows/docs/rnw-dependencies)
 
-## Step 1: Start the Metro Server
+> Note: I had to use the manual setup instructions at first to get React Native running. 
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Step 1: Start the Server
 
-To start Metro, run the following command from the _root_ of your React Native project:
+In the base directory, run the command `npm run start`
+This will build the C# modules AND the react components into one working directory and will launch the emulator.
 
-```bash
-# using npm
-npm start
+## Step 2: Modifying The App
 
-# OR using Yarn
-yarn start
-```
+App.tsx in the root folder contains the intial components for the UX. All there is for now is the boilerplate code that came with React Native AND some code I use to implment two textboxes with numbers that call into our backend c# code to add the numbers and return the value back to the frontend.
 
-## Step 2: Start your Application
+The `windows` folder contains all the C# code. Navigate to `windows/Rn2/MyProjectStuff` to find the test provider I was working with.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Step 3: Familiarize yourself with React Native
+[Getting Started React Native](https://reactnative.dev/docs/getting-started)
 
-### For Android
+[Getting Started React Native for Windows](https://microsoft.github.io/react-native-windows/docs/getting-started)
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### Items to still figure out
+- Is there an easier way to pull the c# module into React Native frontend? Right now we essentially mimic the same interface on the frontend as we do in the backend. See `NativeTestProvider.ts` for those details. 
 
 # Troubleshooting
 
@@ -77,3 +36,10 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+
+
+```
+
+```
